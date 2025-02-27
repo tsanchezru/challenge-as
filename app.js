@@ -29,7 +29,24 @@ function agregarAmigo() {
 
     //limpia el campo
     inputAmigo.value = "";
+    //para que el cursor quede posicionado en el cuadro de texto para capturar otro nombre
     inputAmigo.focus();
 
 }
 
+function actualizarLista() {
+    let listaAmigos = document.getElementById("listaAmigos");
+    //limpia el contenido actual de la lista dejando un string vacio
+    listaAmigos.innerHTML = ""; 
+
+    //recorrer el array con un ciclo
+    for (let i = 0; i < array.length; i++) {
+        //se crea una variable item para crear un elemento li dentro de ella, el cual corresponde a los nombres
+        let item = document.createElement("li");
+        //se le pasa a item el contenido dentro de los indices del array amigo
+        item.textContent = amigo(i);
+        //se agrega como hijo a la  li que se llamo item
+        listaAmigos.appendChild(li);
+    }
+
+}
