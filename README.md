@@ -39,16 +39,12 @@ cd challenge-as
 3. abra  el archivo index.html seguns su gusto, desde VScode usando liveserver o directamente desde el explorador y eligiendo un navegador para la ejecucion del proyecto.
 
 
-_Finaliza con un ejemplo de cómo obtener datos del sistema o como usarlos para una pequeña demo_
-
 ## Ejecutando Localmente⚙️
 
 _Este proyecto no requiere ninguna instalación adicional. Simplemente abre el archivo index.html en tu navegador y empieza a usar la aplicación._
 
 
 ## Construido con 🛠️
-
-_Menciona las herramientas que utilizaste para crear tu proyecto_
 
 HTML - Para la estructura y diseño de la página.
 CSS - Para los estilos visuales.
