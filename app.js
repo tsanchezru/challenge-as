@@ -24,13 +24,13 @@ function agregarAmigo() {
     amigos.push(nombreAmigo);
 
 
-    //actualiza la lista
-    actualizarLista();
-
     //limpia el campo
     inputAmigo.value = "";
     //para que el cursor quede posicionado en el cuadro de texto para capturar otro nombre
     inputAmigo.focus();
+
+    //actualiza la lista
+    actualizarLista();
 
 }
 
@@ -40,13 +40,30 @@ function actualizarLista() {
     listaAmigos.innerHTML = ""; 
 
     //recorrer el array con un ciclo
-    for (let i = 0; i < array.length; i++) {
+    for (let i = 0; i < amigos.length; i++) {
         //se crea una variable item para crear un elemento li dentro de ella, el cual corresponde a los nombres
         let item = document.createElement("li");
         //se le pasa a item el contenido dentro de los indices del array amigo
-        item.textContent = amigo(i);
+        item.textContent = amigos[i];
         //se agrega como hijo a la  li que se llamo item
-        listaAmigos.appendChild(li);
+        listaAmigos.appendChild(item);
     }
+
+}
+
+function sortearAmigo() {
+    if (amigos.length == 0)  {
+        alert("No hay amigos para sortear");
+        return;
+    }
+    //genera un numero aleatorio entre 0 y el tamaño de la lista amigos.length
+    let indiceAleatorio = Math.floor(Math.random() * amigos.length);
+    //aqui se utiliza el numeero generado como indice para obtener 
+    // el nombre del amigo sosrteado
+    let amigoSorteado = amigos[indiceAleatorio];
+
+    //muestar el resultado en el html
+    let resultado = document.getElementById("resultado");
+    resultado.innerHTML = `El amigo sorteado es: <strong>${amigoSorteado}</strong>`;
 
 }
